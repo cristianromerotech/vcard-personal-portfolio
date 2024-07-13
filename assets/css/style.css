@@ -1905,3 +1905,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   object-fit: cover;
   transition: var(--transition-1);
 }
+
+.portfolio-modal{
+  width: 1000px;
+}
