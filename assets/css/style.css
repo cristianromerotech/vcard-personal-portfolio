@@ -1894,3 +1894,14 @@ textarea.form-input::-webkit-resizer { display: none; }
   .timeline-text { max-width: 700px; }
 
 }
+
+.portfolio-content {
+  width: 200px;
+}
+
+.portfolio-img  {
+  width: 600px;
+  height: 450px;
+  object-fit: cover;
+  transition: var(--transition-1);
+}
