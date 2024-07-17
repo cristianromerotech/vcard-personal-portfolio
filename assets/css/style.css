@@ -1010,7 +1010,9 @@ main {
 .project-item > a:hover img { transform: scale(1.1); }
 
 .project-title,
+.project-text,
 .project-category { margin-left: 10px; }
+
 
 .project-title {
   color: var(--white-2);
@@ -1897,15 +1899,52 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .portfolio-content {
   width: 200px;
+  h5 {
+  
+    color: #ffffff;
+  }
+
 }
 
 .portfolio-img  {
   width: 600px;
-  height: 450px;
+  height: 300px;
+  max-width: 600px;
+  max-height: 450px;
   object-fit: cover;
   transition: var(--transition-1);
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-1);
+    margin: 10px;
+  }
+  
 }
 
 .portfolio-modal{
   width: 1000px;
+  /* max-height: 300px;  *//* Establece la altura máxima para que aparezca la barra de desplazamiento */
+  overflow-y: auto; /* Añade una barra de desplazamiento vertical cuando el contenido sea mayor que la altura máxima */
+  height: 500px;
 }
+
+  /* Estilo personalizado para la barra de desplazamiento */
+  .portfolio-modal::-webkit-scrollbar {
+    width: 8px; /* Ancho de la barra de desplazamiento */
+  }
+
+  .portfolio-modal::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color de fondo de la barra de desplazamiento */
+    border-radius: 4px; /* Radio de borde de la pista */
+  }
+
+  .portfolio-modal::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color del "thumb" (el indicador deslizante de la barra de desplazamiento) */
+    border-radius: 4px; /* Radio de borde del "thumb" */
+  }
+
+  .portfolio-modal::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Color del "thumb" al pasar el cursor sobre él */
+  }

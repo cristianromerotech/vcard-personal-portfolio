@@ -170,7 +170,9 @@ const portfolioOverlay = document.querySelector("[portfolio-overlay]");
 
 // modal variable
 const portfolioImg = document.querySelector("[data-portfolio-img-modal]");
+const portfolioImgTwo = document.querySelector("[data-portfolio-img-modal-two]");
 const portfolioTitle = document.querySelector("[data-portfolio-title-modal]");
+const portfolioText = document.querySelector("[data-portfolio-text-modal]");
 const portfolioCategory = document.querySelector("[data-portfolio-category-modal]");
 
 // modal toggle function
@@ -186,6 +188,25 @@ for (let i = 0; i < portfolioItem.length; i++) {
 
     portfolioImg.alt = this.querySelector("[data-portfolio-img]").alt;
     portfolioImg.src = this.querySelector("[data-portfolio-img]").src;
+    if (this.querySelector("[data-portfolio-title]").innerHTML === "Macros usando Visual Basic") {
+     portfolioImgTwo.style.display = 'block';
+      portfolioImgTwo.src = './assets/images/project_1_1.png';
+      console.log(this.querySelector("[data-portfolio-title]").innerHTML);
+      portfolioText.innerHTML = "Este proyecto fue realizado en el curso de Excel Avanzado de la Universidad de los Andes. Se realizaron macros para automatizar procesos en Excel.";
+    }
+    else if(this.querySelector("[data-portfolio-title]").innerHTML === "Power Bi Ventas documentación oficial"){
+      portfolioImgTwo.style.display = 'block';
+      portfolioImgTwo.src = 'http://127.0.0.1:5500/assets/images/project_2_1.png';
+      console.log(this.querySelector("[data-portfolio-title]").innerHTML);
+      portfolioText.innerHTML = "De la documención oficial podemos aprender reglas de negocio y buenas prácticas para la creación de reportes en Power Bi.";
+   
+    }
+    else {
+      portfolioText.innerHTML = "Segundo texto prueba";
+     portfolioImgTwo.style.display = 'none';
+     portfolioImgTwo.style.margin = '0'; // Establece el margen a 0
+      console.log("nada");
+    }
     portfolioTitle.innerHTML = this.querySelector("[data-portfolio-title]").innerHTML;
     portfolioCategory.innerHTML = this.querySelector("[data-portfolio-category]").innerHTML;
 
